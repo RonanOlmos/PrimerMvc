@@ -1,0 +1,22 @@
+﻿@model PrimerMvc.Models.Item;
+@{
+    ViewData["Title"] = "Modificar";
+}
+
+<h3>Modificar un item</h3>
+
+<form asp-action="Modificar" method="post">
+    <div class="form-group">
+        <label for="Name">Nombre</label>
+        <input type="text" class="form-control" asp-for="Name" />
+    </div>
+    @* <div class="form-group">
+        <label for="Price">Precio</label>
+        <input type="number" class="form-control" asp-for="Price" />
+    </div> *@
+    <div class="form-group">
+        <label for="CategoryId">Categoria</label>
+        <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-control"></select>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

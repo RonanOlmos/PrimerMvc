@@ -1,0 +1,14 @@
+﻿@model PrimerMvc.Models.Item
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h3>¿Seguro que quiere eliminar este item?</h3>
+
+<p>@Model.Name</p>
+@* <p>@Model.Theme</p> *@
+
+<form asp-action="Eliminar" method="post">
+    <input type="hidden" asp-for="Id"/>
+    <input type="submit" class="btn btn-danger" value="Eliminar" />
+</form>
